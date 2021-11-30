@@ -1,5 +1,9 @@
 # trend-micro-technical-exercise
 
+## Requirements
+```bash
+Currently used Node.js version: 14.17.2
+```
 ## Build Setup
 
 ```bash
