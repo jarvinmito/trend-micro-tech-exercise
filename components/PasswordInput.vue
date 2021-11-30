@@ -37,7 +37,7 @@ export default {
         computedValue (value) {
             this.resetCriteriaValidation()
             // Min chars of 8
-            if (value.length > 8) {
+            if (value.length >= 8) {
                 this.validate('min-chars')
             }
             // has one number

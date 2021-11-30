@@ -205,6 +205,7 @@ hr {
 // Page specific styles
 .signup {
 	background-color: var(--color-white);
+	min-height: 100vh;
 	&__nav,
 	&__container {
 		display: flex;
@@ -270,6 +271,7 @@ hr {
 		padding: 6rem;
 	}
 	.signup {
+		min-height: auto;
 		border-radius: 2rem;
 		box-shadow: 0 0.5rem 1rem 0.5rem var(--color-gray-shadow);
 		max-width: 61rem;
