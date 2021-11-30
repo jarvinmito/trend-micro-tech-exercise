@@ -12,11 +12,21 @@
 				</div>
 				<div class="signup__socmed">
 					<button class="icon light">
-						<div><img src="/google.svg" /></div>
+						<div>
+							<svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M11 8.8V13.2H17.2238C16.3152 15.7608 13.8688 17.6 11 17.6C7.3612 17.6 4.4 14.6388 4.4 11C4.4 7.3612 7.3612 4.4 11 4.4C12.5774 4.4 14.0954 4.9654 15.2746 5.9928L18.1654 2.6752C16.1854 0.9504 13.6422 0 11 0C4.9346 0 0 4.9346 0 11C0 17.0654 4.9346 22 11 22C17.0654 22 22 17.0654 22 11V8.8H11Z" fill="#3C71FF"/>
+							</svg>
+							<!-- <img src="/google.svg" /> -->
+						</div>
 						Sign up with Google
 					</button>
 					<button class="icon light">
-						<div><img src="/facebook.svg" /></div>
+						<div>
+							<svg width="12" height="22" viewBox="0 0 12 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M9.66391 3.65292H11.6723V0.154917C11.3258 0.10725 10.1342 0 8.74633 0C5.85058 0 3.86692 1.82142 3.86692 5.16908V8.25H0.671416V12.1605H3.86692V22H7.78475V12.1614H10.851L11.3377 8.25092H7.78383V5.55683C7.78475 4.42658 8.08908 3.65292 9.66391 3.65292Z" fill="#3C71FF"/>
+							</svg>
+							<!-- <img src="/facebook.svg" /> -->
+						</div>
 						Sign up with Facebook
 					</button>
 				</div>
@@ -144,10 +154,14 @@ button {
 	}
 
 	&.light {
-		background-color: transparent;
+		background: transparent;
 		border-color: var(--color-accent-light);
+		color: var(--color-black);
 
 		&:hover {
+			background: var(--color-accent);
+			border-color: var(--color-accent);
+			color: var(--color-white);
 			box-shadow: 0 0.3rem 0.5rem 0 var(--color-gray-shadow);
 		}
 	}
@@ -156,14 +170,24 @@ button {
 		flex-direction: row;
 		justify-content: flex-start;
 		gap: 1.5rem;
-		color: var(--color-black);
 		font-size: 1.3rem;
 
 		& > div {
 			height: 2.2rem;
 			width: 2.2rem;
-			& > img {
-				margin: auto;
+			color: var(--color-accent);
+			& > svg {
+				&,
+				& > path {
+					fill: currentColor;
+					margin: auto;
+				}
+			}
+		}
+
+		&:hover {
+			& > div {
+				color: var(--color-white);
 			}
 		}
 	}
